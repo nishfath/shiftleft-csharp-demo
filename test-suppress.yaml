@@ -1,0 +1,10 @@
+# Example analysis remediation config
+methods:
+   - method: System.Data.Entity.DbSet<TEntity>.Add:TEntity(TEntity)
+     tags:
+       - key: category
+         value: Sensitive Data Leak
+   - pattern: Logger.debug
+     tags:
+       - key: category
+         value: Sensitive Data Leak
